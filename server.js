@@ -2,6 +2,7 @@ const express  = require('express');
 const hbs = require('hbs');
 const getIP = require('ipware')().get_ip;
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -51,6 +52,6 @@ app.get('/about',(req,res) =>{
   });
 });
 
-app.listen(3000, () => {
-  console.log('App server is running on port 3000');
+app.listen(port, () => {
+  console.log(`App server is running on port ${port}`);
 });
