@@ -52,6 +52,13 @@ app.get('/about',(req,res) =>{
   });
 });
 
+app.get('/profiles', (req,res) => {
+    res.render(__dirname + '/views/profiles.hbs', {
+        title : 'Profile Page',
+        message: 'This is portpholio page'
+    });
+});
+
 app.listen(port, () => {
   console.log(`App server is running on port ${port}`);
 });
